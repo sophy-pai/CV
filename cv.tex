@@ -1,0 +1,290 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{
+  \centering{
+    \Huge Jinming 
+    \textsc{Cui}
+	}
+  \bigskip
+  \par
+}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Hebei, China  | 22 October 1994 \\
+    \textsc{Address:}   & HRRH 340, 9D Holyrood Road, Edinburgh, UK, EH8 8FQ \\
+    \textsc{Phone:}     & +44 07516789128; +86 13261602458\\
+    \textsc{email:}     & \href{mailto:jamie.cui@outlook.com}{jamie.cui@outlook.com}\\
+\end{tabular}
+
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+  \textsc{August} 2018 & Master of Science in \textsc{Computer Science}, \textbf{University of Edinburgh}, UK \\
+  & Thesis: ``Bitcoin Wallet Implemenation using Trusted Execution Environment'' \\
+  & | \small Supervisor: Dr. Myrto \textsc{Arapinis}\\
+  & \\
+
+  \textsc{June} 2017 & Bachelor of Science with honour in \textsc{Telecommunications with management}, \\& \normalsize\textbf{Beijing University of Posts and Telecommunications}, China and \normalsize\textbf{Queen Mary}\\& \normalsize\textbf{University of London}, UK\\
+  & Thesis: ``Measurement study of live video streaming infrastructure for serving\\& live video content in China'' | \small Supervisor: Dr. Felix \textsc{Cuadrado}\\
+
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Experience \& Projects}
+\begin{tabular}{r|p{11cm}}
+  \emph{Internship} & Software Developer at \textsc{jikexueyuan.com} in Beijing, China \\
+  & Software Developer at \textsc{ZTE (Zhongxing Telecommunication Equipment Corporation)} in Beijing, China\\
+  \multicolumn{2}{c}{} \\
+  \emph{Volunteer} & \textsc{Brasil global tour 2013} in Beijing, China \\
+  & \textsc{Birds' Nest} in Beijing from Sep, 2013 to Jan, 2014\\
+  & \textsc{Destination \& Imagination} in Beijing, 2015\\
+  & \textsc{IEEE/ACM International Conference on Advances in Social Networks Analysis and Minging 2015}\\
+  \multicolumn{2}{c}{} \\
+
+  \textsc{Oct-Dec 2017}&\emph{Smart Contract Lottery}\\
+  &\footnotesize{Smart Contract Lottery is a smart contract based on Ethereum. Based on token system, the contract allows user buying tokens and when contract's balance reaches certain threshold the contract balance would be transfered to a winner which is chose randomly with respect to user's token number. Fairness, Gas consumption for transactions of various actions are considered. }\\
+  \multicolumn{2}{c}{} \\
+
+  \textsc{Jan-May 2017} & \emph{Measurement study of live video streaming infrastructure for serving
+live video content in China} \\
+  &\footnotesize{The project aims to perform a measurement study to foot print the infrastructture from the most popular Chinese platfrom(Douyu.com). Study involves estimate the size of the infrastructures, as well as its geographical location and server selection strategies. In order to succesfully locate the infrastructure, a combination of active measurement and networking techniques including iptolocation, DNS-based name resolution and address space exploration are used.}\\
+  \multicolumn{2}{c}{} \\
+
+    \textsc{Jan-Nov 2015} & \emph{Intelligent 3D Robot based on Unity 3D} \\
+  &\footnotesize{The project uses a combination of unity3D and html to implement a web application, which performs as a welcom page for fresh university students. The application uses 3D animation and autio audio voice recognition to build a user-friendy and voice control system.}\\
+  \multicolumn{2}{c}{} \\
+
+  % \textsc{Summer 2007} & Summer Intern at \textsc{Lehman Brothers}, \emph{Capital Markets}\\&\footnotesize{Received pre-placed offer from the Exotics Trading Desk as a result of very positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.}
+\end{tabular}
+
+
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{rl}
+  \textsc{August.} 2014 & Third Class National Scolarship \footnotesize(top 20\%) \normalsize\\
+  \textsc{Nov} 2014 & Outstanding Volunteer of International School. \footnotesize(University Level) \normalsize\\
+  \textsc{Nov} 2015 & Second Prize for National Student Competition for Creation. \footnotesize(National Level) \normalsize\\
+  \textsc{May.} 2017 & International English Language Tests \footnotesize(AWA. 7.5 with 9 in listening)\normalsize\\
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Chinese:}&Mothertongue\\
+\textsc{English:}&Fluent\\
+\end{tabular}
+
+\section{Skills \& Endorsements}
+\begin{tabular}{rl}
+  Knowledge: &Cryptocurrency, Machine Learning, Cryptography\\
+  Languages: &Linux, C, Java, PHP, JavaScript, Python, LaTeX\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}
+\end{tabular}
+
+\section{Interests and Activities}
+Cryptocurrency, Anomynous System, Cryptographic Protocols and General Computer Security\\
+Game Theory, Deep Learning\\
+Basketball, Drawing, Photoshop
+
+\section{External Links}
+\begin{tabular}{rl}
+    \textsc{Github:}    & \href{https://github.com/Jamie2Cui}{https://github.com/Jamie2Cui}\\
+    \textsc{Personal Blog:}& \href{https://jamie2cui.github.io/Jamie-Home/}{https://jamie2cui.github.io/Jamie-Home/}
+\end{tabular}
+
+% \newpage
+% \par{\centering\Large \hypertarget{grds}{Master of Science in \textsc{Finance}}\par}\large{\centering Grades\par}\normalsize
+% \begin{center}
+% \begin{tabular}{lcc}
+% \multicolumn{1}{c}{\textsc{Exam}}&\textsc{Grade}&\textsc{Credit Hrs}\\ \hline
+% Corporate Finance (Valuation)	&25&	6\\
+% Financial Statement Analysis	&28&	6\\
+% Statistics	&27&	6\\
+% Theory of Finance	&26&	6\\
+% Quantitative Methods for Finance	&30&	6\\
+% Econometrics	&24	&6\\
+% Derivatives	&31&	6\\
+% Management of Financial and Insurance Companies	&30&	6\\
+% Business Law	&31&	6\\
+% Investment Banking	&28&	6\\ \\
+		
+% Behavioral Models for Economics and Finance	&29&	6\\
+% Numerical Methods for Finance	&29&	6\\
+% Advanced Derivatives	&30&	6\\
+% Fixed Income (Advanced Methods)	&30&	6\\ \\
+		
+% English Language	&30&	4\\
+% French Language	&31&	4\\
+		
+% Internship	&	&8\\
+		
+% Final Thesis	&	&20\\
+		
+% 		& Total&120\\\cline{2-3}
+% &\textsc{Gpa}&\textbf{28.61}
+% \end{tabular}
+% \end{center}
+% \bigskip
+% \hrule
+% \bigskip
+% \par{\centering\Large \hypertarget{grds_cleli}{Undergraduate Degree in \textsc{Law and Business Administration}}\par}\large{\centering Grades\par}\normalsize
+
+% \begin{center}
+
+% \tablefirsthead{%
+%   \multicolumn{1}{c}{\textsc{Esame (\textsc{ita})}}&\multicolumn{1}{c}{\textsc{Exam (\textsc{eng})}}&\textsc{Grade}&\textsc{Credit Hrs}\\ \hline}
+% \tablehead{%
+% \multicolumn{1}{c}{\textsc{Esame (\textsc{ita})}}&\multicolumn{1}{c}{\textsc{Exam (\textsc{eng})}}&\textsc{Grade}&\textsc{Credit Hrs}\\ \hline
+% }
+% \tabletail{%
+% }
+% \tablelasttail{}	
+
+%  \begin{supertabular}{p{4.9cm} p{4.9cm} c c}
+% Economia aziendale&Theory and principles of management& 28 & 8\\
+% Istituzioni di diritto privato&Principles of private law&30&8\\
+%  Istituzioni di diritto pubblico 
+% &
+%  Principles of public law 
+% & 30&
+%  6 
+% \\
+% Matematica generale 
+% & Mathematics 
+% &31&8\\
+%  Contabilit\`a e Bilancio 
+% & Accounting and Financial statements 
+% & 31 & 8\\
+%  Diritto del lavoro 
+% &
+%  Labour law 
+% & 30&
+% 4 
+% \\
+%  Informatica & Computer skills &29& 4 
+% \\
+%  Economia e gestione delle imprese & Corporate management &31&6 
+% \\
+%  Microeconomia & Microeconomics &30&8 
+% \\
+%  Contabilit\`a e bilancio 2 & Accounting and financial statements 2 
+% &29&8 \\
+%  Diritto commerciale & Company and business law &30&8 
+% \\
+%  Macroeconomia & Macroeconomics &29&8 
+% \\
+%  Statistica & Statistics &30&6\\
+%  Diritto delle procedure concorsuali & Insolvency law &31&4 
+% \\
+%  Finanza aziendale 
+% & Corporate finance 
+% &31 &8 \\
+%  Matematica finanziaria & Financial mathematics &31&4 
+% \\
+%  Programmazione e controllo 
+% & Management accounting &31&8 
+% \\
+% Lingua Inglese \textsc{c1}& English Language \textsc{c1}& 25&6\\ 
+% Diritto tributario & Tax law &30&6 
+% \\
+% Organizzazione e sistemi informativi aziendali &Management information systems &28&6 
+% \\
+%  Strategia e politica aziendale* 
+% & Business strategy* & 29& 6 
+% \\
+% Derivati*&Derivatives*&30&6\\
+% Opzionale all'estero* & Corporate Financial Strategy* &30&6\\
+% Lingua Francese \textsc{b1} & French Language \textsc{b1}&31&6\\
+% Economia dei mercati e degli intermediari finanziari* 
+% &Financial markets and institutions* &30&6 
+% \\
+% Revisione aziendale 
+% &Financial auditing &31&6 
+% \\
+% Scienza delle finanze &Public economics &30&6 
+% \\
+%  Lavoro finale& Final report&&6\\
+% & & Total&180\\\cline{3-4}
+% & &\textsc{Gpa}&\textbf{29.85}\\ \\ \multicolumn{4}{l}{\footnotesize A star (*) indicates that the course was taken at the \textbf{University of Southern California}, Los Angeles, \textsc{usa}}
+%  \end{supertabular}
+% \end{center}
+% \bigskip
+% \hrule
+% \bigskip
+% \par{\centering\Large \hypertarget{grds_usc}{Exchange Program at \textsc{usc}, Los Angeles}\par}\large{\centering Grades\par}\normalsize
+
+% \begin{center}
+% \begin{tabular}{lcc}
+% \multicolumn{1}{c}{\textsc{Exam}}&\textsc{Grade}&\textsc{Grade Points}\\ \hline
+% Corporate Financial Strategy	&A&	4\\
+% Derivatives	&A&	4\\
+% Money, Credit, and Banking	&A&	4\\
+% Business Strategy & A-& 3.5\\
+% & &\\\cline{2-3}
+%  &\textsc{Gpa}&\textbf{3.875}
+% \end{tabular}
+% \end{center}
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
